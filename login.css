@@ -1,0 +1,117 @@
+/* Reset default margin, padding, box-sizing, and font-family for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Styling for the body */
+body {
+    background-color: #ff9d9d; /* Set background color to light red */
+    color: white; /* Set text color to white */
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Styling for the header */
+header {
+    width: 100%; /* Full width header */
+    background-color: #FF8484; /* Set background color to light coral */
+    padding: 20px; /* Padding around header content */
+    text-align: center; /* Center align text within header */
+    position: fixed; /* Fixed position to stick at the top */
+    top: 0; /* Position at the top of the viewport */
+    z-index: 1; /* Ensure header stays above other content */
+}
+
+/* Styling for the header title */
+header h1 {
+    font-size: 24px; /* Set font size for header title */
+    font-weight: bold; /* Set font weight to bold */
+    text-transform: uppercase; /* Convert text to uppercase */
+    margin: 0; /* Remove margin around header title */
+}
+
+/* Styling for general heading */
+h2 {
+    text-align: center; /* Center align text */
+    padding: 50px 20px; /* Padding around heading */
+    margin: auto; /* Center horizontally */
+    color: black; /* Set text color to black */
+}
+
+/* Styling for email text */
+.email {
+    color: black; /* Set text color to black */
+}
+
+/* Styling for the login section */
+.login-section {
+    width: 80%; /* Set width of login section */
+    max-width: 400px; /* Set maximum width of login section */
+    padding: 20px; /* Padding around login section content */
+    background-color: aliceblue; /* Set background color to light blue */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    margin-top: 80px; /* Margin from the top (adjust as needed for spacing below the header) */
+}
+
+/* Styling for headings within the login section */
+.login-section h2 {
+    text-align: center; /* Center align text */
+    margin-bottom: 20px; /* Bottom margin for spacing */
+}
+
+/* Styling for forms */
+form {
+    display: flex;
+    flex-direction: column; /* Stack form items vertically */
+}
+
+/* Styling for form labels */
+form label {
+    font-size: 18px; /* Set font size for labels */
+    margin-bottom: 8px; /* Bottom margin for spacing */
+    color: black; /* Set text color to black */
+}
+
+/* Styling for form inputs */
+form input {
+    padding: 10px; /* Padding around input */
+    margin-bottom: 16px; /* Bottom margin for spacing */
+    border: 2px solid black; /* Add a black border */
+    border-radius: 4px; /* Rounded corners */
+    outline: none; /* Remove default outline on focus */
+}
+
+/* Styling for form buttons */
+form button {
+    padding: 12px; /* Padding around button */
+    border: none; /* Remove button border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 18px; /* Set font size for button text */
+    background-color: crimson; /* Button background color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Set cursor to pointer on hover */
+}
+
+/* Hover effect on form buttons */
+form button:hover {
+    background-color: orangered; /* Change background color on hover */
+}
+
+/* Styling for paragraphs */
+p {
+    padding: 30px; /* Padding around paragraphs */
+    text-align: center; /* Center align text */
+    color: black; /* Set text color to black */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+    
+}

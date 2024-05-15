@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set character encoding and viewport for responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Food Hut</title>
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <header>
+        <!-- Navigation section with site title -->
+        <nav>
+            <h1>Food Hut</h1>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section for login form -->
+        <section class="login-section">
+            <h2>Login</h2>
+            <!-- Login form with email, password inputs, and submit button -->
+            <form id="loginForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" id="loginBtn">Login</button>
+            </form>
+            <!-- Link to registration page for new users -->
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </section>
+    </main>
+
+    <!-- Importing the login.js script using ES6 module -->
+    <script type="module" src="login.js"></script>
+
+    <!-- JavaScript code for handling form submission and authentication -->
+    <script type="module">
+        // Importing the loginUser function from login.js module
+        import { loginUser } from './login.js';
+
+        // Selecting the login form
+        const loginForm = document.querySelector('#loginForm');
+
+        // Adding event listener for form submission
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault(); // Prevent default form submission behavior
+
+            // Retrieving user inputs (email and password)
+            const email = document.querySelector('#email').value;
+            const password = document.querySelector('#password').value;
+
+            // Calling the loginUser function to authenticate user
+            const loginResult = await loginUser(email, password);
+
+            // Checking if login was successful
+            if (loginResult.success) {
+                // Display success message and redirect to dashboard
+                alert('Login successful! Redirecting to dashboard...');
+                window.location.href = 'FoodHut.html'; // Redirecting to dashboard after successful login
+            } else {
+                // Displaying error message if login failed
+                alert(`Login failed: ${loginResult.error}`);
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* Reset default margin, padding, box-sizing, and font-family */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Styling for the body */
+body {
+    background-color: #ff9d9d;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Styling for the header */
+header {
+    width: 100%;
+    background-color: #FF8484;
+    padding: 20px;
+    text-align: center;
+    position: fixed; /* Fixed position to stick at the top */
+    top: 0;
+    z-index: 1; /* Ensure header stays above other content */
+}
+
+/* Styling for the header title */
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Styling for general heading */
+h2 {
+    text-align: center;
+    padding: 50px 20px;
+    margin: auto;
+    color: black;
+}
+
+/* Styling for the login section */
+.login-section {
+    width: 80%; /* Width of the login section */
+    max-width: 400px; /* Maximum width of the login section */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    margin-top: 80px; /* Margin from the top (adjust as needed for spacing below the header) */
+}
+
+/* Styling for headings within the login section */
+.login-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Styling for forms */
+form {
+    display: flex;
+    flex-direction: column; /* Stack form items vertically */
+}
+
+/* Styling for form labels */
+form label {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+/* Styling for form inputs */
+form input {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Styling for form buttons */
+form button {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hover effect on form buttons */
+form button:hover {
+    background-color: orangered;
+}
+
+/* Styling for paragraphs */
+p {
+    padding: 50px; /* Padding around paragraphs */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+    
+}

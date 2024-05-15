@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set character encoding and viewport for responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Food Hut</title>
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+    <header>
+        <!-- Navigation section with site title -->
+        <nav>
+            <h1>Food Hut</h1>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section for registration form -->
+        <section class="register-section">
+            <h2>Register</h2>
+            <!-- Registration form with full name, email, password inputs, and submit button -->
+            <form id="registerForm">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" id="registerBtn">Register</button>
+            </form>
+            <!-- Link to login page for existing users -->
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+        </section>
+    </main>
+
+    <!-- Import the register.js script using ES6 module -->
+    <script type="module" src="register.js"></script>
+
+    <!-- JavaScript code for handling form submission and user registration -->
+    <script type="module">
+        // Import the registerUser function from register.js module
+        import { registerUser } from './register.js';
+
+        // Select the register form
+        const registerForm = document.querySelector('#registerForm');
+
+        // Add event listener for form submission
+        registerForm.addEventListener('submit', async (e) => {
+            e.preventDefault(); // Prevent default form submission behavior
+
+            // Retrieve user inputs (email and password)
+            const email = document.querySelector('#email').value;
+            const password = document.querySelector('#password').value;
+
+            // Call the registerUser function to register the user
+            const registrationResult = await registerUser(email, password);
+
+            // Check if registration was successful
+            if (registrationResult.success) {
+                // Display success message and redirect to login page
+                alert('Registration successful! Please log in to continue.');
+                window.location.href = 'login.html'; // Redirect to login page after successful registration
+            } else {
+                // Display error message if registration failed
+                alert(`Registration failed: ${registrationResult.error}`);
+            }
+        });
+    </script>
+
+</body>
+</html>

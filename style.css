@@ -1,0 +1,215 @@
+/* Reset default margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Styling for the body */
+body {
+    background-color: #ff9d9d;
+    color: white;
+}
+
+/* Styling for the header navigation */
+header nav {
+    background-color: #FF8484;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Styling for the header navigation title */
+header nav h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Styling for the search form within the navigation */
+header nav form {
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling for text input in the search form */
+form input[type="text"] {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+/* Styling for text input and button in the form */
+form input[type="text"],
+button[type="button"] {
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Styling for the dish container */
+.dish-container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    place-items: center;
+}
+
+/* Styling for individual recipe cards */
+.recipe {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(78, 73, 73, 0.1) -5px -5px 10px rgba(34, 34, 34, 0.5);
+    cursor: pointer;
+    max-width: 350px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect on recipe cards */
+.recipe:hover {
+    transform: scale(1.1);
+}
+
+/* Styling for recipe image */
+.recipe img {
+    height: 300px;
+}
+
+/* Styling for recipe titles */
+.recipe h3 {
+    font-size: 22px;
+    margin-block: 5px;
+}
+
+/* Styling for additional recipe information */
+.recipe p {
+    font-size: 20px;
+    color: grey;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* Styling for bold spans within recipe paragraphs */
+.recipe span {
+    font-weight: bold;
+}
+
+/* Styling for recipe buttons */
+.recipe button {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 16px auto;
+    background-color: crimson;
+}
+
+/* Styling for recipe details popup */
+.recipe-information {
+    display: none;
+    position: fixed;
+    font-size: 22px;
+    top: 50%;
+    left: 50%;
+    width: 45%;
+    height: 55%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    transition: all 0.7s ease-in-out;
+    background-color: #C4686A;
+    overflow-y: scroll;
+}
+
+/* Styling for form button within navigation */
+form button[type="button"] {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+/* Hover effect on buttons */
+form button[type="button"]:hover,
+.recipe button:hover,
+.recipe-closeBtn:hover {
+    background-color: orangered;
+}
+
+/* Styling for recipe details content */
+.recipe-details-content {
+    padding: 35px;
+}
+
+/* Styling for recipe name in popup */
+.DishName {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Styling for list of ingredients */
+.Ingredients {
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+/* Styling for recipe instructions */
+.Instructions {
+    line-height: 30px;
+    white-space: pre-line;
+}
+
+/* Custom scrollbar styling for recipe popup */
+.recipe-information::-webkit-scrollbar {
+    width: 12px;
+}
+
+.recipe-information::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 18px;
+}
+
+/* Custom scrollbar styling for the body */
+body::-webkit-scrollbar {
+    width: 18px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: lightgrey;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 20px;
+}
+
+/* Styling for recipe close button */
+.recipe-closeBtn {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 600px) {
+    /* Adjust navigation layout for smaller screens */
+    header nav {
+        flex-direction: column;
+    }
+    header nav form {
+        width: 80%;
+        margin-top: 20px;
+    }
+}

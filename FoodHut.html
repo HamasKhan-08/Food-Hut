@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Hut</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <!-- Navigation section with the site's title and search form -->
+        <nav>
+            <h1>Food Hut</h1>
+            <form>
+                <!-- Search input field -->
+                <input type="text" placeholder="Search For Your Dish..." class="SearchBar"/>
+                <!-- Search button -->
+                <button type="button" class="SearchBtn">Search</button>
+            </form>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <!-- Container for displaying search results -->
+            <div class="dish-container">
+                <h2>Search For Your Dish</h2>
+            </div>
+            <!-- Popup for displaying recipe details -->
+            <div class="recipe-information">
+                <!-- Button to close the recipe details popup -->
+                <button type="button" class="recipe-closeBtn">Close</button>
+                <!-- Container to show the recipe details -->
+                <div class="recipe-details-content"></div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
